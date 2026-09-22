@@ -15,10 +15,10 @@
     if (ambient && !prefersReduced) {
       var max = document.documentElement.scrollHeight - window.innerHeight;
       var progress = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-      // Travels from just under the hero down to just above the footer,
-      // never quite reaching either edge so it always reads as a glow
-      // rather than a hard-edged spotlight.
-      var y = 12 + progress * 76;
+      // Starts lower in the hero (not tight against the nav) and travels
+      // down to just above the footer, never quite reaching either edge
+      // so it always reads as a glow rather than a hard-edged spotlight.
+      var y = 34 + progress * 54;
       document.documentElement.style.setProperty('--ambient-y', y + '%');
     }
   }

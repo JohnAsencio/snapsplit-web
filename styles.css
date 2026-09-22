@@ -25,7 +25,7 @@
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
   --container: 1120px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --ambient-y: 15%;
+  --ambient-y: 34%;
 }
 
 * { box-sizing: border-box; }
