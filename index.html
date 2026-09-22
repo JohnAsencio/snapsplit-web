@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="ambient" aria-hidden="true"></div>
 
 <nav class="nav" id="nav">
   <div class="container">
@@ -101,14 +102,8 @@
   </div>
 </footer>
 
+<script src="main.js"></script>
 <script>
-(function () {
-  var nav = document.getElementById('nav');
-  window.addEventListener('scroll', function () {
-    nav.classList.toggle('scrolled', window.scrollY > 8);
-  }, { passive: true });
-})();
-
 /* Scroll-scrubbed deck: the section is pinned for 320vh of scroll, and
  * everything inside is driven purely by how far through that span the
  * user has scrolled — no scroll-triggered one-shot fades. Reduced-motion

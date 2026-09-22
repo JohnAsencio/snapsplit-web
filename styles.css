@@ -25,6 +25,7 @@
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
   --container: 1120px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ambient-y: 15%;
 }
 
 * { box-sizing: border-box; }
@@ -49,6 +50,18 @@ body::before {
   opacity: 0.05;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* The one lamp: a soft warm glow, fixed to the viewport, whose vertical
+   position (--ambient-y) main.js updates on scroll — it drifts down the
+   page with you rather than sitting still, which is the whole "feeling
+   of travel" the flat dark ground was missing on its own. */
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(60vh circle at 50% var(--ambient-y), var(--accent-wash) 0%, transparent 70%);
 }
 
 img { max-width: 100%; display: block; }
@@ -110,9 +123,10 @@ p { margin: 0; color: var(--text-secondary); max-width: 54ch; }
 
 /* ---------- Hero ---------- */
 
-.hero { padding: 22vh 0 14vh; }
-.hero h1 { max-width: 15ch; margin-bottom: 26px; }
-.hero .lede { max-width: 46ch; margin-bottom: 28px; }
+.hero { position: relative; z-index: 2; padding: 22vh 0 14vh; text-align: center; }
+.hero .container { display: flex; flex-direction: column; align-items: center; }
+.hero h1 { max-width: 15ch; margin: 0 auto 26px; }
+.hero .lede { max-width: 46ch; margin: 0 auto 28px; }
 .hero .note { font-size: 13px; color: var(--text-tertiary); }
 
 .hero h1, .hero .lede, .hero .note {
@@ -129,7 +143,7 @@ p { margin: 0; color: var(--text-secondary); max-width: 54ch; }
 
 /* ---------- Scroll-linked reveal ---------- */
 
-.reveal { height: 320vh; position: relative; }
+.reveal { height: 320vh; position: relative; z-index: 2; }
 .reveal-sticky {
   position: sticky;
   top: 0;
@@ -194,7 +208,10 @@ p { margin: 0; color: var(--text-secondary); max-width: 54ch; }
 .rcard-then .rcard-tag { color: var(--archive); }
 .rcard-now .rcard-tag { color: var(--accent); }
 
-.reveal-copy { position: relative; margin-top: 44px; text-align: center; max-width: 480px; min-height: 84px; padding: 0 24px; }
+/* width:100% (not just max-width) matters here: every child is
+   position:absolute, so this box has no in-flow content to size itself
+   by and would otherwise collapse toward zero width. */
+.reveal-copy { position: relative; width: 100%; margin-top: 44px; text-align: center; max-width: 480px; min-height: 84px; padding: 0 24px; }
 .reveal-copy h3 { margin-bottom: 10px; }
 .reveal-copy p { margin: 0 auto; }
 .reveal-phase {
@@ -224,7 +241,7 @@ p { margin: 0; color: var(--text-secondary); max-width: 54ch; }
 
 /* ---------- Sections ---------- */
 
-section.plain { padding: 14vh 0; }
+section.plain { position: relative; z-index: 2; padding: 14vh 0; }
 .section-copy { max-width: 640px; }
 .section-copy h2 { margin-bottom: 18px; }
 .section-copy .lede { margin-bottom: 22px; }
