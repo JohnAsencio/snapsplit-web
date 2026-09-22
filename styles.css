@@ -4,8 +4,6 @@
    near-black room with one amber lamp left burning, and a cool, fixed
    counter-tone for whatever's being measured against. */
 
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap');
-
 :root {
   --bg: #0b0a09;
   --surface: #151210;
@@ -340,6 +338,8 @@ section { position: relative; z-index: 2; padding: 96px 0; }
   gap: 48px;
   align-items: start;
 }
+.pro-eyebrow { margin-bottom: 14px; }
+.pro-heading { margin-bottom: 18px; }
 .pro-list { list-style: none; margin: 0; padding: 0; }
 .pro-list li {
   padding: 13px 0;
