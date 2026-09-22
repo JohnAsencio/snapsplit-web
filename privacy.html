@@ -5,13 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — SnapSplit</title>
 <meta name="description" content="SnapSplit's privacy policy: on-device only, no accounts, no analytics, no ads, no SnapSplit server.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
   .doc { max-width: 680px; margin: 0 auto; padding: 64px 24px 120px; position: relative; z-index: 2; }
-  .doc .eyebrow { margin-bottom: 16px; }
+  .doc .eyebrow {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+  }
   .doc h1 { font-size: clamp(32px, 6vw, 48px); margin-bottom: 8px; }
   .doc .updated { font-size: 13px; color: var(--text-tertiary); margin: 10px 0 40px; }
   .summary {
@@ -25,7 +30,7 @@
   .summary strong { color: var(--accent); }
   .doc section { padding: 26px 0; border-top: 1px solid var(--hairline); }
   .doc section:first-of-type { border-top: none; padding-top: 0; }
-  .doc h2 { font-family: var(--font-body); font-size: 17px; font-weight: 700; margin-bottom: 10px; letter-spacing: 0; }
+  .doc h2 { font-size: 17px; font-weight: 700; font-stretch: normal; margin-bottom: 10px; letter-spacing: 0; }
   .doc p, .doc li { font-size: 15px; max-width: none; }
   .doc ul { margin: 10px 0 0; padding-left: 20px; color: var(--text-secondary); }
   .doc li + li { margin-top: 6px; }
@@ -39,7 +44,6 @@
   <div class="container">
     <a class="wordmark" href="./">SnapSplit</a>
     <div class="nav-links">
-      <a href="./#how">How it works</a>
       <a href="./#pro">Pro</a>
     </div>
   </div>

@@ -4,111 +4,87 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SnapSplit</title>
-<meta name="description" content="SnapSplit — see your progress, side by side. A local-first iOS app for progress photos: no account, no analytics, no ads.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="SnapSplit lines up your baseline and today's photo the moment you take it. No account, no analytics, kept entirely on your phone.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav" id="nav">
   <div class="container">
     <a class="wordmark" href="./">SnapSplit</a>
     <div class="nav-links">
-      <a href="#privacy">Privacy</a>
-      <a href="#pro">Pro</a>
-      <a href="privacy.html">Full policy</a>
+      <a href="privacy.html">Privacy</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
   <div class="container">
-    <div class="hero-copy">
-      <h1>See your progress,<br>side by side.</h1>
-      <p class="lede">Snap today's photo. Tap any date on the calendar. Your baseline and today sit next to each other, instantly — every photo stays on your device.</p>
-      <span class="chip"><span class="dot"></span>Coming soon to the App Store</span>
-      <div class="hero-facts">
-        <span>No account</span>
-        <span>No analytics</span>
-        <span>No ads</span>
-        <span>100% on-device</span>
-      </div>
-    </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="glow"></div>
-      <div class="card-fan">
-        <div class="card card-then">
-          <div class="card-fill"></div>
-          <span class="card-tag">THEN</span>
-        </div>
-        <div class="card card-now">
-          <div class="card-fill"></div>
-          <span class="card-tag">NOW</span>
-        </div>
-      </div>
-    </div>
+    <h1>Today, next to any day.</h1>
+    <p class="lede">SnapSplit lines up your baseline and today's photo the moment you take it — matched by a ghost overlay, measured by your weight trend.</p>
+    <p class="note">Coming soon to the App Store</p>
   </div>
 </header>
 
-<section id="how">
-  <div class="container">
-    <div class="section-head">
-      <h2>Three taps, not a routine.</h2>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <span class="num">01</span>
-        <h3>Snap today</h3>
-        <p>The built-in camera overlays a faint ghost of your last photo, so your framing and pose land the same way every time.</p>
+<section class="reveal" id="reveal">
+  <div class="reveal-sticky">
+    <div class="reveal-stage" id="stage">
+      <div class="reveal-glow" id="glow"></div>
+      <div class="rcard rcard-then" id="cardThen">
+        <div class="rcard-fill"></div>
+        <span class="rcard-tag">Then</span>
       </div>
-      <div class="step">
-        <span class="num">02</span>
-        <h3>Pick a baseline</h3>
-        <p>Tap any date on the calendar strip to choose what today gets measured against — day one, last month, wherever you want.</p>
-      </div>
-      <div class="step">
-        <span class="num">03</span>
-        <h3>See the difference</h3>
-        <p>Both photos sit side by side with your weight trend above them — a 7-day average and the change since your baseline.</p>
+      <div class="rcard rcard-now" id="cardNow">
+        <div class="rcard-fill"></div>
+        <span class="rcard-tag">Now</span>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="privacy" class="section-tight">
-  <div class="container">
-    <div class="privacy-panel">
-      <div class="section-head">
-        <h2>Nothing leaves your device.</h2>
-        <p class="lede">SnapSplit was built without a backend on purpose. There's no account to create, no analytics watching what you do, and no ad network along for the ride. Your photos and weigh-ins live in protected storage on your phone — full stop.</p>
+    <div class="reveal-copy">
+      <div class="reveal-phase" id="phase0">
+        <h3>Start anywhere.</h3>
+        <p>Tap any day on the calendar. That becomes your baseline — day one, last month, whenever you want to measure from.</p>
       </div>
-      <div class="fact-row">
-        <div class="fact">No account<span>Open the app and start — nothing to sign up for.</span></div>
-        <div class="fact">No analytics<span>Zero third-party tracking SDKs, anywhere.</span></div>
-        <div class="fact">No ads<span>Nothing to sell, nothing watching for it.</span></div>
-        <div class="fact">On-device storage<span>iCloud sync is optional, and it's your own iCloud.</span></div>
+      <div class="reveal-phase" id="phase1">
+        <h3>Match it exactly.</h3>
+        <p>A faint outline of your last photo sits on the live camera preview, so your framing lands the same way every time.</p>
       </div>
-      <a class="link-arrow" href="privacy.html">Read the full privacy policy →</a>
+      <div class="reveal-phase" id="phase2">
+        <h3>See what changed.</h3>
+        <p>Baseline and today, side by side — with your 7-day weight average and the change since your baseline right above them.</p>
+      </div>
+    </div>
+    <div class="reveal-progress" id="progress">
+      <span></span><span></span><span></span>
     </div>
   </div>
 </section>
 
-<section id="pro">
+<section class="plain" id="privacy">
+  <div class="container">
+    <div class="section-copy">
+      <h2>Nothing leaves your phone.</h2>
+      <p class="lede">No account. No analytics. No ad network. Photos and weigh-ins stay in protected storage on your device — iCloud sync, if you turn it on, goes to your own private iCloud, not to us.</p>
+      <a class="chevron-link" href="privacy.html">
+        Read the privacy policy
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="plain" id="pro">
   <div class="container">
     <div class="pro-grid">
       <div>
-        <div class="eyebrow pro-eyebrow">SnapSplit Pro</div>
-        <h2 class="pro-heading">One purchase.<br>Unlocked forever.</h2>
-        <p class="lede">No subscription, no auto-renewal, no recurring charge. Pay once through your Apple ID and every Pro feature stays unlocked for good.</p>
+        <h2>One purchase.<br>Yours for good.</h2>
+        <p class="lede">No subscription, no auto-renewal. Pay once through your Apple ID and keep every Pro feature.</p>
       </div>
       <ul class="pro-list">
-        <li>Multiple albums for cuts, bulks, or rehab</li>
+        <li>Multiple albums</li>
         <li>Side, Back, and custom poses</li>
         <li>Weight charts and trends</li>
-        <li>Video timelapse export</li>
-        <li>Optional iCloud sync</li>
+        <li>Timelapse export</li>
+        <li>iCloud sync</li>
         <li>Home Screen widgets</li>
       </ul>
     </div>
@@ -126,26 +102,113 @@
 </footer>
 
 <script>
-// A single restrained interaction: the hero cards tilt very slightly toward
-// the cursor. Skipped entirely on touch devices and for reduced-motion users.
+(function () {
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 8);
+  }, { passive: true });
+})();
+
+/* Scroll-scrubbed deck: the section is pinned for 320vh of scroll, and
+ * everything inside is driven purely by how far through that span the
+ * user has scrolled — no scroll-triggered one-shot fades. Reduced-motion
+ * users get a static resting layout instead (see styles.css). */
 (function () {
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var isTouch = window.matchMedia('(hover: none)').matches;
-  if (prefersReduced || isTouch) return;
+  var reveal = document.getElementById('reveal');
+  if (prefersReduced || !reveal) return;
 
-  var visual = document.querySelector('.hero-visual');
-  var fan = document.querySelector('.card-fan');
-  if (!visual || !fan) return;
+  var cardThen = document.getElementById('cardThen');
+  var cardNow = document.getElementById('cardNow');
+  var glow = document.getElementById('glow');
+  var phases = [document.getElementById('phase0'), document.getElementById('phase1'), document.getElementById('phase2')];
+  var dots = document.querySelectorAll('#progress span');
 
-  visual.addEventListener('mousemove', function (e) {
-    var rect = visual.getBoundingClientRect();
-    var x = (e.clientX - rect.left) / rect.width - 0.5;
-    var y = (e.clientY - rect.top) / rect.height - 0.5;
-    fan.style.transform = 'rotate(' + (x * -4) + 'deg) translate(' + (x * 6) + 'px,' + (y * 6) + 'px)';
-  });
-  visual.addEventListener('mouseleave', function () {
-    fan.style.transform = '';
-  });
+  function lerp(a, b, t) { return a + (b - a) * t; }
+  function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+  // Remaps t from [inLo, inHi] to [0, 1], clamped — the building block for
+  // "this property only moves during this slice of the scroll".
+  function segment(t, inLo, inHi) { return clamp((t - inLo) / (inHi - inLo), 0, 1); }
+
+  var ticking = false;
+
+  function render() {
+    ticking = false;
+    var rect = reveal.getBoundingClientRect();
+    var scrollable = rect.height - window.innerHeight;
+    var progress = scrollable > 0 ? clamp(-rect.top / scrollable, 0, 1) : 0;
+
+    // Three even acts: (0) baseline card takes the stage, (1) today's
+    // card takes over, (2) both settle side by side as the real compare
+    // layout, with the stat copy landing last.
+    var a = segment(progress, 0.0, 0.36);
+    var b = segment(progress, 0.30, 0.68);
+    var c = segment(progress, 0.62, 1.0);
+
+    // THEN card: enters large and centered, then slides left/shrinks
+    // once NOW starts taking over, settling into its final "baseline"
+    // slot on the left.
+    var thenScale = lerp(1.05, 0.78, b);
+    var thenX = lerp(0, -92, b);
+    var thenY = lerp(0, 8, b);
+    var thenRotate = lerp(-2, -6, b);
+    var thenOpacity = lerp(0.0, 1, segment(progress, 0, 0.08));
+    cardThen.style.transform = 'translate(-50%,-50%) translate(' + thenX + 'px,' + thenY + 'px) rotate(' + thenRotate + 'deg) scale(' + thenScale + ')';
+    cardThen.style.opacity = thenOpacity;
+    cardThen.style.zIndex = b < 0.5 ? 1 : 2;
+
+    // NOW card: waits offstage-right, scales up to dominate during act
+    // two, then settles into its final slot on the right, in front.
+    var nowEnter = segment(progress, 0.24, 0.5);
+    var nowSettle = segment(progress, 0.6, 0.9);
+    var nowScale = lerp(0.7, 1.08, nowEnter) - lerp(0, 0.3, nowSettle);
+    var nowX = lerp(140, 0, nowEnter) + lerp(0, 92, nowSettle);
+    var nowY = lerp(30, 0, nowEnter) - lerp(0, 8, nowSettle);
+    var nowRotate = lerp(6, 2, nowEnter) + lerp(0, 4, nowSettle);
+    var nowOpacity = nowEnter;
+    cardNow.style.transform = 'translate(-50%,-50%) translate(' + nowX + 'px,' + nowY + 'px) rotate(' + nowRotate + 'deg) scale(' + nowScale + ')';
+    cardNow.style.opacity = nowOpacity;
+    cardNow.style.zIndex = 3;
+
+    glow.style.opacity = 0.5 + 0.5 * Math.sin(progress * Math.PI);
+    glow.style.transform = 'translate(-50%,-50%) scale(' + lerp(0.85, 1.15, Math.sin(progress * Math.PI)) + ')';
+
+    // Text gets its own, much narrower crossfade windows than the cards —
+    // two paragraphs overlapping at 50% opacity reads as mush, whereas two
+    // cards overlapping reads as a deck. Each phase fades in over ~6% of
+    // scroll, holds, then (except the last) fades out over another ~8%.
+    function textOpacity(fadeInStart, fullBy, fadeOutStart, fadeOutEnd) {
+      var into = segment(progress, fadeInStart, fullBy);
+      if (fadeOutEnd === undefined) return into;
+      var outOf = 1 - segment(progress, fadeOutStart, fadeOutEnd);
+      return Math.min(into, outOf);
+    }
+    var weights = [
+      textOpacity(0.0, 0.06, 0.28, 0.36),
+      textOpacity(0.32, 0.40, 0.60, 0.68),
+      textOpacity(0.64, 0.72)
+    ];
+    phases.forEach(function (el, i) {
+      var w = weights[i];
+      el.style.opacity = w;
+      el.style.transform = 'translateY(' + lerp(10, 0, w) + 'px)';
+      el.style.pointerEvents = w > 0.5 ? 'auto' : 'none';
+    });
+
+    var activeIndex = weights.indexOf(Math.max.apply(null, weights));
+    dots.forEach(function (d, i) { d.classList.toggle('active', i === activeIndex); });
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(render);
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  render();
 })();
 </script>
 
