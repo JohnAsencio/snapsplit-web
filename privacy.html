@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnapSplit Privacy Policy</title>
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --surface: #ffffff;
+    --border: #e4e1da;
+    --text: #22201c;
+    --text-secondary: #5a564d;
+    --text-tertiary: #8a8578;
+    --accent: #3d6b5c;
+    --accent-soft: #e7efec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171613;
+      --surface: #1f1e1a;
+      --border: #322f29;
+      --text: #f2f0ea;
+      --text-secondary: #b8b4a9;
+      --text-tertiary: #837e70;
+      --accent: #7fb8a3;
+      --accent-soft: #223029;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .page { max-width: 700px; margin: 0 auto; padding: 56px 16px 96px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent); background: var(--accent-soft);
+    padding: 5px 11px; border-radius: 999px;
+  }
+  h1 { font-size: clamp(28px, 6vw, 38px); line-height: 1.15; letter-spacing: -0.01em; margin: 18px 0 6px; }
+  .updated { color: var(--text-tertiary); font-size: 14px; margin: 0 0 32px; }
+  .summary { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; margin-bottom: 40px; }
+  .summary p { margin: 0; font-size: 16px; color: var(--text); }
+  .summary strong { color: var(--accent); }
+  section { padding: 26px 0; border-top: 1px solid var(--border); }
+  section:first-of-type { border-top: none; }
+  h2 { font-size: 18px; margin: 0 0 10px; letter-spacing: -0.005em; }
+  p, li { font-size: 15.5px; color: var(--text-secondary); }
+  ul { margin: 8px 0 0; padding-left: 20px; }
+  li + li { margin-top: 6px; }
+  li strong, p strong { color: var(--text); font-weight: 600; }
+  footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13.5px; color: var(--text-tertiary); }
+  a { color: var(--accent); }
+  .back { display: inline-block; margin-bottom: 24px; font-size: 14px; color: var(--text-secondary); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="page">
+  <a class="back" href="./">&larr; SnapSplit</a>
+  <span class="eyebrow">Privacy Policy</span>
+  <h1>SnapSplit collects nothing.</h1>
+  <p class="updated">Last updated September 21, 2026</p>
+
+  <div class="summary">
+    <p>SnapSplit has <strong>no account, no analytics, no advertising, and no SnapSplit server</strong>. Your photos, weights, and notes stay in protected storage on your device. If you turn on optional iCloud sync, your data goes straight to your own private iCloud account — Apple's infrastructure, never SnapSplit's.</p>
+  </div>
+
+  <section>
+    <h2>Data we collect</h2>
+    <p>None. SnapSplit doesn't ask you to create an account, doesn't run analytics or crash-reporting SDKs, and has no backend server to send anything to. Nothing about your usage is transmitted to us, because there is no "us" on the other end of a network connection — the app has no network layer for your data at all.</p>
+  </section>
+
+  <section>
+    <h2>Photos and entries</h2>
+    <p>Progress photos, weights, and notes are saved directly on your device using Apple's Data Protection storage and the on-device SwiftData database. They never leave your device unless you explicitly enable iCloud sync (see below) or use the app's own Share feature to export an image yourself.</p>
+  </section>
+
+  <section>
+    <h2>Camera and photo library</h2>
+    <p>SnapSplit asks for camera access so you can take progress photos, and photo library access so you can import an existing one. Both are used only at the moment you capture or import a photo — nothing is scanned, indexed, or accessed in the background.</p>
+  </section>
+
+  <section>
+    <h2>Apple Health</h2>
+    <p>If you enable it, SnapSplit reads your most recent body-weight sample from Apple Health to suggest a value when you log a weigh-in. This is:</p>
+    <ul>
+      <li><strong>Read-only</strong> — SnapSplit never writes anything back to Health.</li>
+      <li><strong>On-device</strong> — the value is used to prefill a text field and is never transmitted anywhere.</li>
+      <li><strong>Optional</strong> — you can decline the permission or turn it off later in Settings.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Optional iCloud sync (Pro)</h2>
+    <p>SnapSplit Pro can sync your entries across your own devices using CloudKit, backed by <strong>your</strong> private iCloud account. That data is stored and transmitted by Apple under your Apple ID — SnapSplit has no server of its own and cannot access, read, or store a copy of anything that passes through it. Turning sync off stops any further exchange with iCloud.</p>
+  </section>
+
+  <section>
+    <h2>In-app purchases</h2>
+    <p>SnapSplit Pro is a one-time purchase handled entirely by Apple's StoreKit. Your payment method and billing details go to Apple, not to SnapSplit — the app never sees or stores that information.</p>
+  </section>
+
+  <section>
+    <h2>Face ID / passcode lock</h2>
+    <p>If you turn on the optional app lock, authentication is handled entirely by iOS. SnapSplit asks the system "did this device's owner unlock?" and gets a yes-or-no answer — it never receives biometric data, a face scan, or a fingerprint.</p>
+  </section>
+
+  <section>
+    <h2>Analytics and advertising</h2>
+    <p>None. SnapSplit contains no third-party analytics SDKs, no advertising SDKs, and no trackers of any kind.</p>
+  </section>
+
+  <section>
+    <h2>Children's privacy</h2>
+    <p>SnapSplit isn't directed at children and doesn't knowingly collect information from anyone — because it doesn't collect information from anyone, regardless of age.</p>
+  </section>
+
+  <section>
+    <h2>Your choices</h2>
+    <p>Open Settings inside the app to see how many entries are stored and to permanently delete all photos, weights, and notes from your device (and from iCloud, if sync is on) at any time.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the update will be posted at this same address with a revised "last updated" date above.</p>
+  </section>
+
+  <section>
+    <h2>Support</h2>
+    <p>Need help, found a bug, or have a question about how SnapSplit works? Use <strong>Settings &rarr; Send Feedback</strong> inside the app, or write to <strong>johnaasencio@gmail.com</strong> directly. SnapSplit has no account system, so there's no login or password to recover — every entry lives only on your own device (and your own iCloud, if you've turned sync on).</p>
+  </section>
+
+  <footer>
+    SnapSplit &middot; johnaasencio@gmail.com
+  </footer>
+</div>
+</body>
+</html>

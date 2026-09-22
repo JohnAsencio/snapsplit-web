@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SnapSplit</title>
+<meta name="description" content="SnapSplit — see your progress, side by side. A local-first iOS progress-photo app.">
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --surface: #ffffff;
+    --border: #e4e1da;
+    --text: #22201c;
+    --text-secondary: #5a564d;
+    --text-tertiary: #8a8578;
+    --accent: #3d6b5c;
+    --accent-soft: #e7efec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171613;
+      --surface: #1f1e1a;
+      --border: #322f29;
+      --text: #f2f0ea;
+      --text-secondary: #b8b4a9;
+      --text-tertiary: #837e70;
+      --accent: #7fb8a3;
+      --accent-soft: #223029;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    max-width: 520px;
+    margin: 32px 16px;
+    padding: 40px 32px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    text-align: center;
+  }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--accent); background: var(--accent-soft);
+    padding: 5px 11px; border-radius: 999px;
+  }
+  h1 { font-size: clamp(28px, 7vw, 36px); line-height: 1.15; margin: 18px 0 8px; letter-spacing: -0.01em; }
+  p.tagline { font-size: 16px; color: var(--text-secondary); margin: 0 0 28px; }
+  .cta {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  .links { margin-top: 28px; font-size: 14px; }
+  .links a { color: var(--text-secondary); text-decoration: none; margin: 0 10px; }
+  .links a:hover { color: var(--accent); }
+  .note { margin-top: 20px; font-size: 12.5px; color: var(--text-tertiary); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <span class="eyebrow">Coming soon</span>
+    <h1>SnapSplit</h1>
+    <p class="tagline">See your progress, side by side.</p>
+    <span class="cta">View on the App Store</span>
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="mailto:johnaasencio@gmail.com">Contact</a>
+    </div>
+    <p class="note">This is a placeholder landing page — replace with the real one before launch.</p>
+  </div>
+</body>
+</html>
