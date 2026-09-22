@@ -4,87 +4,147 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SnapSplit</title>
-<meta name="description" content="SnapSplit — see your progress, side by side. A local-first iOS progress-photo app.">
-<style>
-  :root {
-    --bg: #f7f6f3;
-    --surface: #ffffff;
-    --border: #e4e1da;
-    --text: #22201c;
-    --text-secondary: #5a564d;
-    --text-tertiary: #8a8578;
-    --accent: #3d6b5c;
-    --accent-soft: #e7efec;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #171613;
-      --surface: #1f1e1a;
-      --border: #322f29;
-      --text: #f2f0ea;
-      --text-secondary: #b8b4a9;
-      --text-tertiary: #837e70;
-      --accent: #7fb8a3;
-      --accent-soft: #223029;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .card {
-    max-width: 520px;
-    margin: 32px 16px;
-    padding: 40px 32px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    text-align: center;
-  }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--accent); background: var(--accent-soft);
-    padding: 5px 11px; border-radius: 999px;
-  }
-  h1 { font-size: clamp(28px, 7vw, 36px); line-height: 1.15; margin: 18px 0 8px; letter-spacing: -0.01em; }
-  p.tagline { font-size: 16px; color: var(--text-secondary); margin: 0 0 28px; }
-  .cta {
-    display: inline-block;
-    padding: 12px 22px;
-    border-radius: 999px;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    opacity: 0.55;
-    pointer-events: none;
-  }
-  .links { margin-top: 28px; font-size: 14px; }
-  .links a { color: var(--text-secondary); text-decoration: none; margin: 0 10px; }
-  .links a:hover { color: var(--accent); }
-  .note { margin-top: 20px; font-size: 12.5px; color: var(--text-tertiary); }
-</style>
+<meta name="description" content="SnapSplit — see your progress, side by side. A local-first iOS app for progress photos: no account, no analytics, no ads.">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="card">
-    <span class="eyebrow">Coming soon</span>
-    <h1>SnapSplit</h1>
-    <p class="tagline">See your progress, side by side.</p>
-    <span class="cta">View on the App Store</span>
-    <div class="links">
-      <a href="privacy.html">Privacy Policy</a>
+
+<nav class="nav">
+  <div class="container">
+    <a class="wordmark" href="./">SnapSplit</a>
+    <div class="nav-links">
+      <a href="#privacy">Privacy</a>
+      <a href="#pro">Pro</a>
+      <a href="privacy.html">Full policy</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <h1>See your progress,<br>side by side.</h1>
+      <p class="lede">Snap today's photo. Tap any date on the calendar. Your baseline and today sit next to each other, instantly — every photo stays on your device.</p>
+      <span class="chip"><span class="dot"></span>Coming soon to the App Store</span>
+      <div class="hero-facts">
+        <span>No account</span>
+        <span>No analytics</span>
+        <span>No ads</span>
+        <span>100% on-device</span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="glow"></div>
+      <div class="card-fan">
+        <div class="card card-then">
+          <div class="card-fill"></div>
+          <span class="card-tag">THEN</span>
+        </div>
+        <div class="card card-now">
+          <div class="card-fill"></div>
+          <span class="card-tag">NOW</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="how">
+  <div class="container">
+    <div class="section-head">
+      <h2>Three taps, not a routine.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h3>Snap today</h3>
+        <p>The built-in camera overlays a faint ghost of your last photo, so your framing and pose land the same way every time.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h3>Pick a baseline</h3>
+        <p>Tap any date on the calendar strip to choose what today gets measured against — day one, last month, wherever you want.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h3>See the difference</h3>
+        <p>Both photos sit side by side with your weight trend above them — a 7-day average and the change since your baseline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy" class="section-tight">
+  <div class="container">
+    <div class="privacy-panel">
+      <div class="section-head">
+        <h2>Nothing leaves your device.</h2>
+        <p class="lede">SnapSplit was built without a backend on purpose. There's no account to create, no analytics watching what you do, and no ad network along for the ride. Your photos and weigh-ins live in protected storage on your phone — full stop.</p>
+      </div>
+      <div class="fact-row">
+        <div class="fact">No account<span>Open the app and start — nothing to sign up for.</span></div>
+        <div class="fact">No analytics<span>Zero third-party tracking SDKs, anywhere.</span></div>
+        <div class="fact">No ads<span>Nothing to sell, nothing watching for it.</span></div>
+        <div class="fact">On-device storage<span>iCloud sync is optional, and it's your own iCloud.</span></div>
+      </div>
+      <a class="link-arrow" href="privacy.html">Read the full privacy policy →</a>
+    </div>
+  </div>
+</section>
+
+<section id="pro">
+  <div class="container">
+    <div class="pro-grid">
+      <div>
+        <div class="eyebrow" style="margin-bottom:14px;">SnapSplit Pro</div>
+        <h2 style="margin-bottom:18px;">One purchase.<br>Unlocked forever.</h2>
+        <p class="lede">No subscription, no auto-renewal, no recurring charge. Pay once through your Apple ID and every Pro feature stays unlocked for good.</p>
+      </div>
+      <ul class="pro-list">
+        <li>Multiple albums for cuts, bulks, or rehab</li>
+        <li>Side, Back, and custom poses</li>
+        <li>Weight charts and trends</li>
+        <li>Video timelapse export</li>
+        <li>Optional iCloud sync</li>
+        <li>Home Screen widgets</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>&copy; 2026 SnapSplit</span>
+    <div class="foot-links">
+      <a href="privacy.html">Privacy</a>
       <a href="mailto:johnaasencio@gmail.com">Contact</a>
     </div>
-    <p class="note">This is a placeholder landing page — replace with the real one before launch.</p>
   </div>
+</footer>
+
+<script>
+// A single restrained interaction: the hero cards tilt very slightly toward
+// the cursor. Skipped entirely on touch devices and for reduced-motion users.
+(function () {
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var isTouch = window.matchMedia('(hover: none)').matches;
+  if (prefersReduced || isTouch) return;
+
+  var visual = document.querySelector('.hero-visual');
+  var fan = document.querySelector('.card-fan');
+  if (!visual || !fan) return;
+
+  visual.addEventListener('mousemove', function (e) {
+    var rect = visual.getBoundingClientRect();
+    var x = (e.clientX - rect.left) / rect.width - 0.5;
+    var y = (e.clientY - rect.top) / rect.height - 0.5;
+    fan.style.transform = 'rotate(' + (x * -4) + 'deg) translate(' + (x * 6) + 'px,' + (y * 6) + 'px)';
+  });
+  visual.addEventListener('mouseleave', function () {
+    fan.style.transform = '';
+  });
+})();
+</script>
+
 </body>
 </html>

@@ -3,65 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SnapSplit Privacy Policy</title>
+<title>Privacy Policy — SnapSplit</title>
+<meta name="description" content="SnapSplit's privacy policy: on-device only, no accounts, no analytics, no ads, no SnapSplit server.">
+<link rel="stylesheet" href="styles.css">
 <style>
-  :root {
-    --bg: #f7f6f3;
-    --surface: #ffffff;
-    --border: #e4e1da;
-    --text: #22201c;
-    --text-secondary: #5a564d;
-    --text-tertiary: #8a8578;
-    --accent: #3d6b5c;
-    --accent-soft: #e7efec;
+  .doc { max-width: 680px; margin: 0 auto; padding: 64px 24px 120px; position: relative; z-index: 2; }
+  .doc .eyebrow { margin-bottom: 16px; }
+  .doc h1 { font-size: clamp(32px, 6vw, 48px); margin-bottom: 8px; }
+  .doc .updated { font-size: 13px; color: var(--text-tertiary); margin: 10px 0 40px; }
+  .summary {
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    border-radius: 16px;
+    padding: 22px 26px;
+    margin-bottom: 44px;
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #171613;
-      --surface: #1f1e1a;
-      --border: #322f29;
-      --text: #f2f0ea;
-      --text-secondary: #b8b4a9;
-      --text-tertiary: #837e70;
-      --accent: #7fb8a3;
-      --accent-soft: #223029;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.55;
-  }
-  .page { max-width: 700px; margin: 0 auto; padding: 56px 16px 96px; }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--accent); background: var(--accent-soft);
-    padding: 5px 11px; border-radius: 999px;
-  }
-  h1 { font-size: clamp(28px, 6vw, 38px); line-height: 1.15; letter-spacing: -0.01em; margin: 18px 0 6px; }
-  .updated { color: var(--text-tertiary); font-size: 14px; margin: 0 0 32px; }
-  .summary { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; margin-bottom: 40px; }
-  .summary p { margin: 0; font-size: 16px; color: var(--text); }
+  .summary p { color: var(--text); max-width: none; }
   .summary strong { color: var(--accent); }
-  section { padding: 26px 0; border-top: 1px solid var(--border); }
-  section:first-of-type { border-top: none; }
-  h2 { font-size: 18px; margin: 0 0 10px; letter-spacing: -0.005em; }
-  p, li { font-size: 15.5px; color: var(--text-secondary); }
-  ul { margin: 8px 0 0; padding-left: 20px; }
-  li + li { margin-top: 6px; }
-  li strong, p strong { color: var(--text); font-weight: 600; }
-  footer { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13.5px; color: var(--text-tertiary); }
-  a { color: var(--accent); }
-  .back { display: inline-block; margin-bottom: 24px; font-size: 14px; color: var(--text-secondary); text-decoration: none; }
+  .doc section { padding: 26px 0; border-top: 1px solid var(--hairline); }
+  .doc section:first-of-type { border-top: none; padding-top: 0; }
+  .doc h2 { font-family: var(--font-body); font-size: 17px; font-weight: 700; margin-bottom: 10px; letter-spacing: 0; }
+  .doc p, .doc li { font-size: 15px; max-width: none; }
+  .doc ul { margin: 10px 0 0; padding-left: 20px; color: var(--text-secondary); }
+  .doc li + li { margin-top: 6px; }
+  .doc strong { color: var(--text); font-weight: 600; }
+  .doc-footer { margin-top: 44px; padding-top: 24px; border-top: 1px solid var(--hairline); font-size: 13px; color: var(--text-tertiary); }
 </style>
 </head>
 <body>
-<div class="page">
-  <a class="back" href="./">&larr; SnapSplit</a>
+
+<nav class="nav">
+  <div class="container">
+    <a class="wordmark" href="./">SnapSplit</a>
+    <div class="nav-links">
+      <a href="./#how">How it works</a>
+      <a href="./#pro">Pro</a>
+    </div>
+  </div>
+</nav>
+
+<div class="doc">
   <span class="eyebrow">Privacy Policy</span>
   <h1>SnapSplit collects nothing.</h1>
   <p class="updated">Last updated September 21, 2026</p>
@@ -135,9 +116,8 @@
     <p>Need help, found a bug, or have a question about how SnapSplit works? Use <strong>Settings &rarr; Send Feedback</strong> inside the app, or write to <strong>johnaasencio@gmail.com</strong> directly. SnapSplit has no account system, so there's no login or password to recover — every entry lives only on your own device (and your own iCloud, if you've turned sync on).</p>
   </section>
 
-  <footer>
-    SnapSplit &middot; johnaasencio@gmail.com
-  </footer>
+  <div class="doc-footer">SnapSplit &middot; johnaasencio@gmail.com</div>
 </div>
+
 </body>
 </html>
