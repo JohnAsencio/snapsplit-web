@@ -57,7 +57,7 @@
 <div class="doc">
   <span class="eyebrow">Privacy Policy</span>
   <h1>SnapSplit collects nothing.</h1>
-  <p class="updated">Last updated September 21, 2026</p>
+  <p class="updated">Last updated November 5, 2026</p>
 
   <div class="summary">
     <p>SnapSplit has <strong>no account, no analytics, no advertising, and no SnapSplit server</strong>. Your photos, weights, and notes stay in protected storage on your device. If you turn on optional iCloud sync, your data goes straight to your own private iCloud account — Apple's infrastructure, never SnapSplit's.</p>
@@ -101,6 +101,25 @@
   <section>
     <h2>Face ID / passcode lock</h2>
     <p>If you turn on the optional app lock, authentication is handled entirely by iOS. SnapSplit asks the system "did this device's owner unlock?" and gets a yes-or-no answer — it never receives biometric data, a face scan, or a fingerprint.</p>
+  </section>
+
+  <section id="face-data">
+    <h2>Face data</h2>
+    <p><strong>What face data SnapSplit collects.</strong> SnapSplit does not collect, store, or share face data. Two features involve your face, and neither one gives SnapSplit a face scan, a facial map, or anything that could identify you:</p>
+    <ul>
+      <li><strong>Face ID lock (optional).</strong> Face ID is handled entirely by iOS. SnapSplit gets a yes-or-no answer to "did this device's owner unlock?" and never accesses, receives, or stores Face ID data, facial geometry, or images from the TrueDepth camera.</li>
+      <li><strong>Pose alignment (Pro).</strong> To help you match your pose between progress photos, SnapSplit uses Apple's on-device Vision body-pose detection on the photo you just took and on your earlier reference photo. It reads five body points: nose, left and right shoulder, and left and right hip. The nose point is the only point taken from the face. It is a single position in the frame (two numbers and a confidence value). It is not a facial map or face template, it says nothing about facial features or expression, and it is never used to recognize or identify anyone. The same detection also runs on two of your stored photos when you ask for an AI comparison summary.</li>
+    </ul>
+    <p><strong>How it's used.</strong> The body points are used for one thing: calculating a pose-similarity percentage that is shown on the camera screen and can be included in the optional on-device AI comparison summary. The AI model receives only that percentage, never the points or your photos. Face data is not used for identification, advertising, analytics, profiling, or training any model.</p>
+    <p><strong>Storage and retention.</strong> Body points, including the nose point, are processed in memory on your device only. They are never saved to disk, never included in iCloud sync, and never sent off the device. They are deleted when you leave the camera screen or when the comparison summary finishes. SnapSplit keeps no face data after that.</p>
+    <p><strong>Sharing.</strong> Face data is never shared with SnapSplit, Apple, or any other third party, and is never sent to any server. Because no third party receives face data, no third party processes it on SnapSplit's behalf.</p>
+    <p><strong>Deletion and revoking consent.</strong> SnapSplit stores no face data, so there is nothing that needs deleting. You can still control both features at any time:</p>
+    <ul>
+      <li>Turn off the app lock in SnapSplit's Settings, or turn off Face ID for SnapSplit in iOS Settings &rarr; Face ID &amp; Passcode &rarr; Other Apps.</li>
+      <li>Pose detection runs only when you take a photo in SnapSplit's camera with Pro, or when you ask for an AI comparison summary. If you don't use those features, it never runs.</li>
+      <li>Your progress photos themselves can be deleted one at a time from the Timeline, or all at once with Settings &rarr; Delete everything (this also removes them from iCloud if sync is on). You can also delete the app, which removes all of its data from your device.</li>
+    </ul>
+    <p>Questions about face data can be sent to <strong>johnaasencio@gmail.com</strong>.</p>
   </section>
 
   <section>
