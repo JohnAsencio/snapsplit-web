@@ -127,15 +127,25 @@ p { margin: 0; color: var(--text-secondary); max-width: 54ch; }
 .hero .container { display: flex; flex-direction: column; align-items: center; }
 .hero h1 { max-width: 15ch; margin: 0 auto 26px; }
 .hero .lede { max-width: 46ch; margin: 0 auto 28px; }
-.hero .note { font-size: 13px; color: var(--text-tertiary); }
+.hero .note { font-size: 13px; color: var(--text-tertiary); margin-top: 14px; }
 
-.hero h1, .hero .lede, .hero .note {
+.store-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 22px; border-radius: 999px;
+  background: var(--accent); color: var(--on-accent);
+  font-size: 15px; font-weight: 600; text-decoration: none;
+  transition: box-shadow 0.2s var(--ease), filter 0.2s var(--ease);
+}
+.store-btn:hover { filter: brightness(1.08); box-shadow: 0 8px 28px var(--accent-wash); }
+
+.hero h1, .hero .lede, .hero .store-btn, .hero .note {
   opacity: 0;
   transform: translateY(16px);
   animation: rise 1s var(--ease) both;
 }
 .hero .lede { animation-delay: 0.1s; }
-.hero .note { animation-delay: 0.2s; }
+.hero .store-btn { animation-delay: 0.2s; }
+.hero .note { animation-delay: 0.3s; }
 
 @keyframes rise {
   to { opacity: 1; transform: translateY(0); }
@@ -301,7 +311,7 @@ footer a:hover { color: var(--accent); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero h1, .hero .lede, .hero .note { opacity: 1; transform: none; animation: none; }
+  .hero h1, .hero .lede, .hero .store-btn, .hero .note { opacity: 1; transform: none; animation: none; }
   .reveal { height: auto; }
   .reveal-sticky { position: relative; height: auto; padding: 10vh 0; }
   .reveal-stage {
